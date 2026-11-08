@@ -1,0 +1,66 @@
+# ============================================================
+# LabLoop – Root .gitignore
+# ============================================================
+
+# ── Python / Flask Backend ───────────────────────────────────
+backend/.env
+backend/instance/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+backend/.Python
+backend/env/
+backend/venv/
+backend/.venv/
+backend/pip-log.txt
+backend/.eggs/
+backend/*.egg-info/
+backend/dist/
+backend/build/
+
+# ── Flask-Migrate (keep the folder structure, not the DB) ────
+!backend/migrations/
+backend/migrations/versions/*.pyc
+
+# ── Database files (never commit DB data) ────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# ── Uploaded files ────────────────────────────────────────────
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Node / React Frontend ─────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+frontend/.cache/
+
+# ── OS & Editor ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# ── Environment files (all locations) ────────────────────────
+.env
+.env.*
+!.env.example
+
